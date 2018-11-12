@@ -18,8 +18,7 @@ echo -e "\n=> android_frameworks_base"
 cd $ROOT_DIR/frameworks/base
 git reset --hard HEAD
 git fetch $GIT_BASEURL/android_frameworks_base
-git cherry-pick bbf3c8e2ba771d81a8f616bcce0ce314ca3b941b --strategy-option theirs
-git cherry-pick 5996abee607c273118f3b9bc322051a635287ac7 --strategy-option theirs
+git cherry-pick a461f8aa40fb4f51a59eb2f96f22050dd2f976a9 --strategy-option theirs
 
 # android_frameworks_av 
 echo -e "\n=> android_frameworks_av"
