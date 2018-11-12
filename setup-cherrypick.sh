@@ -56,4 +56,5 @@ git reset --hard HEAD
 git fetch $GIT_BASEURL/android_packages_services_Telephony
 git cherry-pick 241038b61b65d2b7a531a8417786585063528056 --strategy-option theirs
 
+cd $ROOT_DIR
 echo -e "\nDone!"
