@@ -9,7 +9,7 @@ Just add the repo to your local_manifest after first sync:
 
 Then execute `repo sync` again and apply all patches with the following command in your tree:
 ```
-vendor/berkeley/vendorsetup.sh
+vendor/berkeley/setup-cherrypick.sh
 ```
 
 Now you can build your ROM!
