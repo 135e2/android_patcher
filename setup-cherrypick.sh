@@ -19,6 +19,7 @@ cd $ROOT_DIR/frameworks/base
 git reset --hard HEAD
 git fetch $GIT_BASEURL/android_frameworks_base
 git cherry-pick a461f8aa40fb4f51a59eb2f96f22050dd2f976a9 --strategy-option theirs
+git cherry-pick f42d8400d5c6e87626fd20d24c4ec3882e4a06b0 --strategy-option theirs
 
 # android_frameworks_av 
 echo -e "\n=> android_frameworks_av"
@@ -54,6 +55,13 @@ cd $ROOT_DIR/packages/services/Telephony
 git reset --hard HEAD
 git fetch $GIT_BASEURL/android_packages_services_Telephony
 git cherry-pick 241038b61b65d2b7a531a8417786585063528056 --strategy-option theirs
+
+# android_packages_apps_Settings
+echo -e "\n=> android_packages_apps_Settings"
+cd $ROOT_DIR/packages/apps/Settings
+git reset --hard HEAD
+git fetch $GIT_BASEURL/android_packages_apps_Settings
+git cherry-pick 673ba9202a00ac118e60154fd2cd92fe9faf4a73 --strategy-option theirs
 
 cd $ROOT_DIR
 echo -e "\nDone!"
