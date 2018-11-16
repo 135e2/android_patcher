@@ -10,8 +10,7 @@ echo -e "\n=> android_system_sepolicy"
 cd $ROOT_DIR/system/sepolicy
 git reset --hard HEAD
 git fetch $GIT_BASEURL/android_system_sepolicy
-git cherry-pick 5721f5ced4e600b4d632565cebea78fc8fdb4c46 --strategy-option theirs
-git cherry-pick 3bcedb6a927e1285305fca9118f549e4244483fc --strategy-option theirs
+git cherry-pick b4e2e94db86bb135cd06253ace2664db3f5a85ef --strategy-option theirs
 
 # android_frameworks_base 
 echo -e "\n=> android_frameworks_base"
@@ -19,7 +18,6 @@ cd $ROOT_DIR/frameworks/base
 git reset --hard HEAD
 git fetch $GIT_BASEURL/android_frameworks_base
 git cherry-pick a461f8aa40fb4f51a59eb2f96f22050dd2f976a9 --strategy-option theirs
-git cherry-pick f42d8400d5c6e87626fd20d24c4ec3882e4a06b0 --strategy-option theirs
 
 # android_frameworks_av 
 echo -e "\n=> android_frameworks_av"
@@ -44,10 +42,10 @@ echo -e "\n=> android_frameworks_opt_telephony"
 cd $ROOT_DIR/frameworks/opt/telephony
 git reset --hard HEAD
 git fetch $GIT_BASEURL/android_frameworks_opt_telephony
-git cherry-pick 0b7bbebbb6946cfa8dc87cd8bdf0c4d4b5633cb7 --strategy-option theirs
-git cherry-pick bfb97a670ca79bc207dbe59bc25a393cae5de881 --strategy-option theirs
-git cherry-pick ea28fb53da79b9344d01b1b32018c2d442907bc5 --strategy-option theirs
-git cherry-pick 8f40da278354b2909686988bbd5ab062dc6dea1c --strategy-option theirs
+git cherry-pick b3b335f7e4b4e86ff9013235f1d6c2b39c06162f --strategy-option theirs
+git cherry-pick 3c2c67b56b7001899edc3ab42b570231d83380e7 --strategy-option theirs
+git cherry-pick bd78ff945ad8bde9177e0dc6d2a9d47b59e96568 --strategy-option theirs
+git cherry-pick 58f5ad577b98b560fe6c84d882604ccc346c61e1 --strategy-option theirs
 
 # android_packages_services_Telephony
 echo -e "\n=> android_packages_services_Telephony"
@@ -55,13 +53,6 @@ cd $ROOT_DIR/packages/services/Telephony
 git reset --hard HEAD
 git fetch $GIT_BASEURL/android_packages_services_Telephony
 git cherry-pick 241038b61b65d2b7a531a8417786585063528056 --strategy-option theirs
-
-# android_packages_apps_Settings
-echo -e "\n=> android_packages_apps_Settings"
-cd $ROOT_DIR/packages/apps/Settings
-git reset --hard HEAD
-git fetch $GIT_BASEURL/android_packages_apps_Settings
-git cherry-pick 673ba9202a00ac118e60154fd2cd92fe9faf4a73 --strategy-option theirs
 
 cd $ROOT_DIR
 echo -e "\nDone!"
